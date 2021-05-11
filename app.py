@@ -33,8 +33,8 @@ sc = StandardScaler()
 X = sc.fit_transform(X)
 
 
-def predict_note_authentication(Gender,Glucose,BP,SkinThickness,SkinThickness,Insulin,BMI,PedigreeFunction,Age):
-  output= model.predict(sc.transform([[Gender,Glucose,BP,SkinThickness,SkinThickness,Insulin,BMI,PedigreeFunction,Age]]))
+def predict_note_authentication(Gender,Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age):
+  output= model.predict(sc.transform([[Gender,Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age]]))
   print("modal is predicted ",output)
   if output==[0]:
     prediction="Decision tree modal is predicted whether the person has disease  "
@@ -73,7 +73,7 @@ def main():
     
     resul=""
     if st.button("Predict"):
-      result=predict_note_authentication(Gender,Glucose,BP,SkinThickness,SkinThickness,Insulin,BMI,PedigreeFunction,Age)
+      result=predict_note_authentication(Gender,Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age)
       st.success('Model has predicted {}'.format(result))
     if st.button("About"):
       st.subheader("Developed by Suyash Sharma 1st mid term ")
